@@ -84,9 +84,15 @@ footer {
     border-top-color: rgb(124, 124, 255, 0.3);
 }
 
+.jumbotron .regulartext {
+    font-size: 22px;
+}
+
 .jumbotron .battle {
     text-align: center;
 }
+
+
 
 .btn-lg {
     padding: 5px 40px;
