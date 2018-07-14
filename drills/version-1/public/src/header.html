@@ -1,9 +1,12 @@
 <template>
+    <h1> Ultimate Battle Royal </h1>
     <nav>
-        <ul>
-            <li repeat.for="row of router.navigation">
-                <a href.bind="row.href"> ${row.title} </a>
-            </li>
-        </ul>
+        <div class="nav">
+            <ul class="nav justify-content-center">
+                <li class="nav-item" repeat.for="row of router.navigation">
+                    <a class="nav-link" href.bind="row.href"> ${row.title} </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </template>

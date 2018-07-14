@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-flow: column wrap; 
+    align-items: center;
+    background: linear-gradient(290deg, #70bfab, #a4cbea, #dfc3ff);
+    background-size: 200% 200%;
+}
+
+h1 {
+    font-family: 'Play', sans-serif;
+    padding-top: 7vh;
+    font-size: 5em !important; 
+}
+
+.intro { 
+
+    width: 40vw;
+}
+
+.jumbotron {
+    background-color: transparent;
+    font-family: 'Play', sans-serif;
+}
+
+.form-check {
+    padding: 0.5em 2em;
+}
