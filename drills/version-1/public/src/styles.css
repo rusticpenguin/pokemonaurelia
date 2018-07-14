@@ -1,25 +1,48 @@
 body {
     display: flex;
-    flex-flow: column wrap; 
+    flex-direction: column; 
     align-items: center;
     background: linear-gradient(290deg, #70bfab, #a4cbea, #dfc3ff);
     background-size: 200% 200%;
 }
 
+header {
+    display: flex;
+    justify-items: center; 
+}
+
+header h1 {
+    padding-top: 4vh;
+}
+
 h1 {
     font-family: 'Play', sans-serif;
-    padding-top: 7vh;
     font-size: 5em !important; 
 }
 
-.intro { 
+nav {
+    
+    background-color: rgb(175, 175, 255, 0.6);
+    padding-bottom: 20px;
+    width: 50vw;
+}
 
-    width: 40vw;
+nav li {
+    font-size: 1.5;
+}
+
+footer {
+    padding: 15px;
+    padding-bottom: 10px;
+    background-color: #202124;
+    text-align: center;
+    color: white;
 }
 
 .jumbotron {
-    background-color: transparent;
+    background-color: rgb(175, 175, 255, 0.3);
     font-family: 'Play', sans-serif;
+    width: 50vw;
 }
 
 .form-check {
