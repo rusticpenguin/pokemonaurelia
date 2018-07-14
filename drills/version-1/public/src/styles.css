@@ -49,6 +49,11 @@ nav li:nth-child(1) :hover {
 nav li:nth-child(2) :hover {
     color: white;
     background-color: #ab77ff;
+}
+
+nav li:nth-child(3) :hover {
+    color: white;
+    background-color: #ab77ff;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 }
@@ -72,6 +77,16 @@ footer {
     width: 70vw;
 }
 
+.jumbotron .battle {
+    text-align: center;
+}
+
 .form-check {
     padding: 0.5em 2em;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

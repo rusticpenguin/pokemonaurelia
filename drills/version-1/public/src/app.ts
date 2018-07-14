@@ -14,9 +14,22 @@ export class App {
         config.options.pushState = true;
         config.map([
             { route: ["", "home"], name: "home", moduleId: PLATFORM.moduleName("./home"), nav: true, title: "Home" },
-            { route: "about", name: "about", moduleId: PLATFORM.moduleName("./about"), nav: true, title: "About" }
+            { route: "about", name: "about", moduleId: PLATFORM.moduleName("./about"), nav: true, title: "About" },
+            { route: "battle:/pkmn", name: "battle", moduleId: PLATFORM.moduleName("./battle"), nav: true, title: "Battle" }
         ]);
 
         this.router = router;
+    }
+
+    pokemon = [
+        { id: 0, image: "green.png", name: 'pkmn1' },
+        { id: 1, image: "blue.png", name: 'pkmn2' },
+        { id: 2, image: "red.png", name: 'pkmn3' },
+    ];
+
+    selectedPokemonName = null;
+
+    selectPokemon(){
+        this.router.navigateToRoute('battle', { pkmn:`${this.selectedPokemonName}`}, {replace: true});
     }
 }
