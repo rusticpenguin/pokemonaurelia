@@ -17,7 +17,7 @@
                 </label>
             </ul>
             <hr class="my-4">
-                  <span>Selected Pokemon: ${selectedPokemonName}</span>
+            <span show.bind="selectedPokemonName">Selected Pokemon: ${selectedPokemonName}</span>
             <a class="btn btn-primary btn-lg float-right" click.delegate="selectPokemon()" role="button">Select</a>
         </form>
     </div>

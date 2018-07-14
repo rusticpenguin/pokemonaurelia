@@ -28,10 +28,13 @@ nav {
     background-color: rgb(175, 175, 255, 0.6);
     padding: 20px 20px;
     width: 70vw;
+    border: 1px solid rgb(188, 224, 223, 0.8);
+    border-bottom: none;
 }
 
 nav ul {
-    background-color: rgb(187, 145, 255, 0.8);
+    border: 1px solid rgb(159, 118, 219, 0.4);
+    background-color: rgb(187, 145, 255, 0.7);
     border-radius: 25px;
 }
 
@@ -42,8 +45,8 @@ nav li {
 nav li:nth-child(1) :hover {
     color: white;
     background-color: #ab77ff;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 nav li:nth-child(2) :hover {
@@ -54,12 +57,12 @@ nav li:nth-child(2) :hover {
 nav li:nth-child(3) :hover {
     color: white;
     background-color: #ab77ff;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 li a {
-    color: #f0e8fc;
+    color: #f2edf9;
 }
 
 footer {
@@ -73,12 +76,30 @@ footer {
 .jumbotron {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     background-color: rgb(175, 175, 255, 0.3);
     width: 70vw;
+    border: 1px solid rgb(188, 224, 223, 0.6);
+    border-top-color: rgb(124, 124, 255, 0.3);
 }
 
 .jumbotron .battle {
     text-align: center;
+}
+
+.btn-lg {
+    padding: 5px 40px;
+    font-size: 1.5em;
+    border-radius: 50px;
+    background: green;
+    border-color: rgba(178, 209, 159, 1);
+    background: linear-gradient(to right, rgb(141, 242, 75, 0.8) , rgb(31, 193, 134, 0.8));
+    color: white !important;
+}
+
+.btn-lg:hover{
+    border-color: rgb(159, 202, 165);
 }
 
 .form-check {
