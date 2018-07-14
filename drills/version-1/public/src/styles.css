@@ -93,7 +93,7 @@ footer {
     font-size: 1.5em;
     border-radius: 50px;
     background: green;
-    border-color: rgba(178, 209, 159, 1);
+    border-color: rgba(178, 209, 159, 0.8);
     background: linear-gradient(to right, rgb(141, 242, 75, 0.8) , rgb(31, 193, 134, 0.8));
     color: white !important;
 }

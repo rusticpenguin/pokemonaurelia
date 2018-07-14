@@ -12,10 +12,11 @@ export class App {
         config.title = "Pokémon BR";
         config.options.root = "/";
         config.options.pushState = true;
+        config.mapUnknownRoutes('not-found')
         config.map([
             { route: ["", "home"], name: "home", moduleId: PLATFORM.moduleName("./home"), nav: true, title: "Home" },
             { route: "about", name: "about", moduleId: PLATFORM.moduleName("./about"), nav: true, title: "About" },
-            { route: "battle:/pkmn", name: "battle", moduleId: PLATFORM.moduleName("./battle"), nav: true, title: "Battle" }
+            { route: "battle", name: "battle", moduleId: PLATFORM.moduleName("./battle"), nav: true, title: "Battle" }
         ]);
 
         this.router = router;

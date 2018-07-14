@@ -26,6 +26,7 @@ Thumbs.db
 
 # Dependencies
 node_modules
+jspm_packages
 
 # Compiled files
 scripts
