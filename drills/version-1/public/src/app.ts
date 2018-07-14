@@ -9,7 +9,7 @@ export class App {
 
     configureRouter(config: RouterConfiguration, router: Router): void {
 
-        config.title = "Ultimate Battle";
+        config.title = "Pokémon BR";
         config.options.root = "/";
         config.options.pushState = true;
         config.map([
