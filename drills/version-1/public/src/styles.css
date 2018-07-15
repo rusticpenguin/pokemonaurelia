@@ -74,6 +74,7 @@ footer {
 }
 
 .jumbotron {
+    padding-top: 30px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 15px;
@@ -92,7 +93,9 @@ footer {
     text-align: center;
 }
 
-
+.radioItem {
+    display: none;
+}
 
 .btn-lg {
     padding: 5px 40px;
@@ -108,12 +111,38 @@ footer {
     border-color: rgb(159, 202, 165);
 }
 
-.form-check {
-    padding: 0.5em 2em;
+.form-check-inline {
+    padding: 0px 0px;
 }
 
 .pokemon {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.pokeball {
+    position: absolute;
+    top: 80%;
+    left: 35%;
+}
+
+#Bulbasaur {
+    font-weight: bold;
+    color: green;
+}
+
+#Squirtle {
+    font-weight: bold;
+    color: blue;
+}
+
+#Charmander {
+    font-weight: bold;
+    color: red;
+}
+
+.thumbnail {
+    height: auto;
+    width: 150px;
 }

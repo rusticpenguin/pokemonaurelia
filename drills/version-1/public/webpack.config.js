@@ -108,7 +108,10 @@ module.exports = ({production, server, extractCss, coverage, analyze} = {}) => (
       allChunks: true
     })),
     ...when(production, new CopyWebpackPlugin([
-      { from: 'static/favicon.ico', to: 'favicon.ico' }])),
+      { from: 'static/favicon.ico', to: 'favicon.ico' },
+      { from: './src/img/squirtle.png', to: './src/img/squirtle.png' },
+      ])),
+
     ...when(analyze, new BundleAnalyzerPlugin())
   ]
 });

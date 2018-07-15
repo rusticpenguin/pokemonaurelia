@@ -12,7 +12,7 @@ export class App {
         config.title = "Pokémon BR";
         config.options.root = "/";
         config.options.pushState = true;
-        config.mapUnknownRoutes('not-found')
+        config.mapUnknownRoutes('notfound')
         config.map([
             { route: ["", "home"], name: "home", moduleId: PLATFORM.moduleName("./home"), nav: true, title: "Home" },
             { route: "about", name: "about", moduleId: PLATFORM.moduleName("./about"), nav: true, title: "About" },
@@ -23,9 +23,9 @@ export class App {
     }
 
     pokemon = [
-        { id: 0, image: "green.png", name: 'pkmn1' },
-        { id: 1, image: "blue.png", name: 'pkmn2' },
-        { id: 2, image: "red.png", name: 'pkmn3' },
+        { id: 0, img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png", name: 'Bulbasaur' },
+        { id: 1, img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png", name: 'Squirtle' },
+        { id: 2, img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png", name: 'Charmander' },
     ];
 
     selectedPokemonName = null;

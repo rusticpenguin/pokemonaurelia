@@ -10,16 +10,20 @@
             <ul>
                 <label repeat.for="pokemon of pokemon">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="group1"
-                            model.bind="pokemon.name" checked.bind="selectedPokemonName">
-                        <label class="form-check-label">
-                            ${pokemon.name} - <img src=${pokemon.image} alt=${pokemon.name}>
-                        </label>
+                        <input class="form-check-input radioItem" type="radio" name="group1"
+                            model.bind="pokemon.name" id.bind="pokemon.id" checked.bind="selectedPokemonName">
+                        <label class="form-check-label" for.bind="pokemon.id">
+                            <img class="thumbnail" alt.one-time="pokemon.name"
+                                src.one-time="pokemon.img"
+                                load.trigger="$event.target.classList.add('loaded') & oneTime">
+                            <img class="pokeball" alt="pokeball" 
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+                                if.bind="selectedPokemonName === pokemon.name">
                     </div>
                 </label>
             </ul>
             <hr class="my-4">
-            <span class="regulartext" show.bind="selectedPokemonName">Selected Pokemon: ${selectedPokemonName}</span>
+            <span class="regulartext" show.bind="selectedPokemonName">Selected Pokemon: <span id.bind="selectedPokemonName">${selectedPokemonName}</span></span>
             <a class="btn btn-primary btn-lg float-right" click.delegate="selectPokemon()" role="button">Select</a>
         </form>
     </div>
