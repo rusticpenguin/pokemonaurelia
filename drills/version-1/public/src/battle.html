@@ -2,11 +2,11 @@
     <div class="jumbotron justify-content-center">
         <h1 class="battle animated bounce">Battle!</h1>
         <div class="pokemon">
-            <div class="pokemon-left">
-                <p params.bind={pokemon:pokemonName} on-completed.bind="errorHome(`${pokemon}`)">${pokemon}</p>
+            <div id="pokemon-left">
+                <img src="${selected}" class="animated bounceIn" id="player" on-completed.bind="errorHome(`${pokemonString}`)">
             </div>
-            <h3>vs.</h3>
-            <div class="pokemon-left">
+            <h3 id="vs">vs.</h3>
+            <div id="pokemon-right" on-completed.bind="fetchDogs()">
             </div>
         </div>
         <div class="attack">

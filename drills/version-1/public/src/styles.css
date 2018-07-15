@@ -94,9 +94,10 @@ footer {
 }
 
 .alert {
-    width: 26.5vw;
+    width: 43vw;
     background-color: #f44242;
     padding: 0px 10px;
+    font-size: 36px
 }
 .radioItem {
     display: none;
@@ -158,4 +159,32 @@ footer {
 #Charmander {
     font-weight: bold;
     color: red;
+}
+
+#player {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    left: 25%;
+    top: 50%;
+    animation-delay: 3s;
+}
+
+#vs {
+    position: absolute;
+    top: 55%;
+    font-weight: bolder;
+    font-size: 60px;
+    color: #f44242;
+    text-shadow: 2px 2px #202124;
+}
+
+#dog {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    left: 60%;
+    top: 40%;
+    border-radius: 100%;
+    animation-delay: 2s;
 }

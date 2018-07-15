@@ -1,11 +1,11 @@
 <template>
     <div class="jumbotron justify-content-center">
-        <h1 class="display-4 animated fadeInDown">Hello, Trainer!</h1>
+        <h1 class="display-4 animated fadeInDown" if.bind="'error' !== dataString">Hello, Trainer!</h1>
         <div class="animated fadeIn">
-            <div class="regulartext alert alert-danger" if.bind="'error' === dataString">
+            <div class="alert alert-danger" if.bind="'error' === dataString">
                 <strong>ERROR!</strong> You forgot to select a Pokémon.
             </div>
-            <p class="regulartext" if.bind="'error' !== dataString">Before you are able to begin battling you must first select your Pokémon.</p>
+            <p class="regulartext">Before you are able to begin battling you must first select your Pokémon.</p>
             <hr class="my-4">
             <p class="regulartext">Select from the list below:</p>
         </div>
@@ -22,6 +22,7 @@
                             <img class="pokeball" alt="pokeball"
                                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
                                 if.bind="selectedPokemonName === pokemon.name">
+                        </label>
                     </div>
                 </label>
             </ul>

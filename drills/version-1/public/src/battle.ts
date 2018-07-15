@@ -1,20 +1,21 @@
 import { HttpClient } from 'aurelia-fetch-client';
-import { Router } from 'aurelia-router'
-import { App } from 'app'
 
 export class Battle {
-    queryString = new URLSearchParams(window.location.search);
-    queryStringToString = new String(this.queryString);
-    pokemon = this.queryStringToString.slice(3);
+    queryString = new String(new URLSearchParams(window.location.search));
+    pokemonString = this.queryString.slice(3).toLowerCase();
+    selected = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png";
+    randomDogSrc = "";
 
-    fetch() {
+    fetchDogs() {
         let client = new HttpClient();
 
         client.fetch('https://dog.ceo/api/breeds/image/random')
-            .then(response => response.json)
-            .then(data => new this.display());
+            .then((res) => res.json())
+            .then((res) => new this.displayDogs(res));
     }
-    display(){
-
+    displayDogs(dogs){
+        let output = `<img src="${dogs.message}" class="animated tada" id="dog" alt="dog">`;
+        let enemy = document.getElementById("pokemon-right");
+        enemy.innerHTML = output;
     }
 }
