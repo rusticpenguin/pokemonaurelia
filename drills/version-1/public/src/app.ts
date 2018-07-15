@@ -1,8 +1,13 @@
 import { Router, RouterConfiguration } from "aurelia-router";
-import { PLATFORM } from "aurelia-framework";
+import { PLATFORM, containerless } from "aurelia-framework";
 import "./styles.css";
+import { isNull, isNullOrUndefined } from "util";
 
 export class App {
+    queryString = new URLSearchParams(window.location.search);
+    queryStringToString = new String(this.queryString);
+    dataString = this.queryStringToString;
+
     router: Router;
     message = 'Hello World!';
     constructor() { }
@@ -31,10 +36,16 @@ export class App {
     selectedPokemonName = null;
 
     selectPokemon(){
-        this.router.navigateToRoute('battle', { pkmn:`${this.selectedPokemonName}`}, {replace: true});
+        this.router.navigateToRoute('battle', {id:`${this.selectedPokemonName}`}, {replace: true});
     }
 
     goHome(){
         this.router.navigateToRoute('home', {replace: true});
+    }
+
+    errorHome(nameString){
+        if (nameString.length < 6){
+            this.router.navigateToRoute('home', {id:`error`}, {replace: true});
+        }
     }
 }

@@ -3,11 +3,14 @@
         <h1 class="battle animated bounce">Battle!</h1>
         <div class="pokemon">
             <div class="pokemon-left">
+                <p params.bind={pokemon:pokemonName} on-completed.bind="errorHome(`${pokemon}`)">${pokemon}</p>
             </div>
             <h3>vs.</h3>
             <div class="pokemon-left">
             </div>
         </div>
-        <button type="button" class="btn btn-primary">Battle</button>
+        <div class="attack">
+            <button type="button" class="btn btn-lg">Attack!</button>
+        </div>
     </div>
 </template>

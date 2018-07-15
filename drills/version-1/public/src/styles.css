@@ -93,6 +93,11 @@ footer {
     text-align: center;
 }
 
+.alert {
+    width: 26.5vw;
+    background-color: #f44242;
+    padding: 0px 10px;
+}
 .radioItem {
     display: none;
 }
@@ -111,11 +116,19 @@ footer {
     border-color: rgb(159, 202, 165);
 }
 
+.attack {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .form-check-inline {
     padding: 0px 0px;
 }
 
 .pokemon {
+    width: 100%;
+    height: 35vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -125,6 +138,11 @@ footer {
     position: absolute;
     top: 80%;
     left: 35%;
+}
+
+.thumbnail {
+    height: auto;
+    width: 150px;
 }
 
 #Bulbasaur {
@@ -140,9 +158,4 @@ footer {
 #Charmander {
     font-weight: bold;
     color: red;
-}
-
-.thumbnail {
-    height: auto;
-    width: 150px;
 }
