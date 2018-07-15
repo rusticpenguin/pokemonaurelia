@@ -33,4 +33,8 @@ export class App {
     selectPokemon(){
         this.router.navigateToRoute('battle', { pkmn:`${this.selectedPokemonName}`}, {replace: true});
     }
+
+    goHome(){
+        this.router.navigateToRoute('home', {replace: true});
+    }
 }
