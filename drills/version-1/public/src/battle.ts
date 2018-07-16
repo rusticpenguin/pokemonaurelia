@@ -1,47 +1,32 @@
 import { HttpClient } from 'aurelia-fetch-client';
 import { log } from 'log.js';
 import { initialize } from 'aurelia-pal-nodejs';
-
-let fuck = "";
-
-
 export class Battle {
     queryString = new String(new URLSearchParams(window.location.search));
     pokemonString = this.queryString.slice(3).toLowerCase();
-    selected = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png";
     client = new HttpClient();
-
-    fetchPokemon() {
-        // this.client.fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur", {
-        // mode: "no-cors"})
-        // .then((res) => res.json())
-        // .then((res) => res.sprites)
-        // .then((res) => res.back_default)
-        // .then((res) => new this.displayPokemon(res))
-    }
+    url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/";
+    bulbasaur = this.url + "1.png";
+    charmander = this.url + "4.png";
+    squirtle = this.url + "7.png";
+    gameOver = 0;
+    animalNames = ["sparky", "patches", "spot", "princess", "daisy", "oscar", "milo"];
+    realName = "";
 
     fetchDogs() {
-        let whatAnimal = this.getRandomInt(0, 1)
-        if (whatAnimal == 1) {
+        let whatAnimal = this.getRandomInt(0, 20);
+        if (whatAnimal < 10) {
             this.client.fetch("https://dog.ceo/api/breeds/image/random")
                 .then((res) => res.json())
                 .then((res) => res.message)
                 .then((res) => new this.displayDogs(res));
         } else {
-            this.client.fetch("https://cataas.com/cat", {
-                mode: "no-cors",
+            this.client.fetch("https://thecatapi.com/api/images/get?image_id", {
+
             })
-
-                .then((res) => res.json())
-                .then((res) => res.file)
-                .then((res) => new this.displayDogs(res));
+                .then((res) => res.url)
+                .then((res) => new this.displayDogs(res))
         }
-    }
-
-    displayPokemon() {
-        let output = "<p>doesnt work</p>";
-        let yeah = document.getElementById("pokemon-left");
-        yeah.innerHTML += output
     }
 
     displayDogs(dogs) {
@@ -50,11 +35,16 @@ export class Battle {
         enemy.innerHTML += output;
     }
 
+    nameAnimal(){
+        let number = this.getRandomInt(0, 7);
+        this.realName = this.animalNames[number];
+    }
+
     attack() {
         let player = document.querySelectorAll("progress")[0];
         let enemy = document.querySelectorAll("progress")[1];
         player.value -= this.getRandomInt(0, 20);
-        enemy.value -= this.getRandomInt(0, 25);
+        enemy.value -= this.getRandomInt(0, 22);
 
         this.didWin(player.value, enemy.value)
     }
@@ -73,10 +63,18 @@ export class Battle {
         }
     }
     gameoverDog() {
-        alert("hi")
+        let dog = document.getElementById("dog");
+        let vs = document.getElementById("vs");
+        dog.classList.add("animationDelayZero", "rotateOutDownLeft");
+        vs.classList.add("animated", "fadeOutDown");
+        this.gameOver = 1;
     }
 
     gameoverPlayer() {
-        alert("poop")
+        let player = document.getElementById("player");
+        let vs = document.getElementById("vs");
+        player.classList.add("animationDelayZero", "fadeOutDown");
+        vs.classList.add("animated", "fadeOutDown");
+        this.gameOver = 1;
     }
 }

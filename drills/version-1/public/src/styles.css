@@ -6,6 +6,8 @@ body {
     background-size: 200% 200%;
     margin: 0 40vw;
     font-family: 'Play', sans-serif;
+    height: 100%;   
+    overflow: hidden;
 }
 
 header {
@@ -130,6 +132,10 @@ footer {
     justify-content: center;
 }
 
+.animationDelayZero {
+    animation-delay: 0 !important;
+}
+
 .form-check-inline {
     padding: 0px 0px;
 }
@@ -174,7 +180,7 @@ footer {
     width: 300px;
     left: 25%;
     top: 50%;
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 #vs {
@@ -184,6 +190,26 @@ footer {
     font-size: 60px;
     color: #f44242;
     text-shadow: 2px 2px #202124;
+}
+
+#nameplateL {
+    position: absolute;
+    left: 29%;
+    top: 80%;
+    background: linear-gradient(#e0ecff, #b9d3f7);
+    padding: 5px 5px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+
+#nameplateR {
+    position: absolute;
+    left: 62%;
+    top: 75%;
+    background: linear-gradient(#e0ecff, #b9d3f7);
+    padding: 5px 5px;
+    padding-right: 20px;
+    border-radius: 10px;
 }
 
 #dog {
@@ -196,14 +222,3 @@ footer {
     animation-delay: 2s;
 }
 
-#healthL {
-    position: absolute;
-    top: 75%;
-    left: 25%;
-}
-
-#healthR {
-    position: absolute;
-    top: 75%;
-    left: 63%;
-}

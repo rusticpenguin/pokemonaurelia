@@ -2,16 +2,25 @@
     <div class="jumbotron justify-content-center">
         <h1 class="battle animated bounce">Battle!</h1>
         <div class="pokemon" on-completed.bind="errorHome(`${pokemonString}`)">
-            <div id="pokemon-left" on-completed.bind="fetchPokemon()">
+            <div id="pokemon-left">
+                <img id="player" class="animated bounceIn" src="${bulbasaur}" alt="bulbasaur" if.bind="'bulbasaur' === pokemonString">
+                <img id="player" class="animated bounceIn" src="${squirtle}" alt="squirtle" if.bind="'squirtle' === pokemonString">
+                <img id="player" class="animated bounceIn" src="${charmander}" alt="charmander" if.bind="'charmander' === pokemonString">
             </div>
-            <progress id="healthL" value="100" max="100"></progress>
+            <div id="nameplateL">
+                <p id="nameL">${pokemonString}</p>
+                <progress id="healthL" value="100" max="100"></progress>
+            </div>
             <h3 id="vs">vs.</h3>
             <div id="pokemon-right" on-completed.bind="fetchDogs()">
             </div>
-            <progress id="healthR" value="100" max="100"></progress>
+            <div id="nameplateR">
+                <p id="nameR" on-completed.bind="nameAnimal()">${realName}</p>
+                <progress id="healthR" value="100" max="100"></progress>
+            </div>
         </div>
         <div class="attack">
-            <button type="button" class="btn btn-lg" click.trigger="attack()">Attack!</button>
+            <button type="button" class="btn btn-lg" click.trigger="attack()" if.bind="0 === gameOver">Attack!</button>
         </div>
     </div>
 </template>
