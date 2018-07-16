@@ -65,6 +65,13 @@ li a {
     color: #f2edf9;
 }
 
+progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 18px;
+    border-radius: 9px;
+}
+
 footer {
     padding: 15px;
     padding-bottom: 10px;
@@ -187,4 +194,16 @@ footer {
     top: 40%;
     border-radius: 100%;
     animation-delay: 2s;
+}
+
+#healthL {
+    position: absolute;
+    top: 75%;
+    left: 25%;
+}
+
+#healthR {
+    position: absolute;
+    top: 75%;
+    left: 63%;
 }

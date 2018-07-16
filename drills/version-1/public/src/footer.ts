@@ -1,3 +1,3 @@
-export class Footer{
-    
+export class Footer {
+
 }

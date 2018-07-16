@@ -1,16 +1,17 @@
 <template>
     <div class="jumbotron justify-content-center">
         <h1 class="battle animated bounce">Battle!</h1>
-        <div class="pokemon">
-            <div id="pokemon-left">
-                <img src="${selected}" class="animated bounceIn" id="player" on-completed.bind="errorHome(`${pokemonString}`)">
+        <div class="pokemon" on-completed.bind="errorHome(`${pokemonString}`)">
+            <div id="pokemon-left" on-completed.bind="fetchPokemon()">
             </div>
+            <progress id="healthL" value="100" max="100"></progress>
             <h3 id="vs">vs.</h3>
             <div id="pokemon-right" on-completed.bind="fetchDogs()">
             </div>
+            <progress id="healthR" value="100" max="100"></progress>
         </div>
         <div class="attack">
-            <button type="button" class="btn btn-lg">Attack!</button>
+            <button type="button" class="btn btn-lg" click.trigger="attack()">Attack!</button>
         </div>
     </div>
 </template>

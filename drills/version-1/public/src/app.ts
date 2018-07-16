@@ -3,11 +3,12 @@ import { PLATFORM, containerless } from "aurelia-framework";
 import "./styles.css";
 import { isNull, isNullOrUndefined } from "util";
 
+
 export class App {
     queryString = new URLSearchParams(window.location.search);
     queryStringToString = new String(this.queryString);
     dataString = this.queryStringToString;
-
+    pokemonJSON = "http://localhost:8080/";
     router: Router;
     message = 'Hello World!';
     constructor() { }
